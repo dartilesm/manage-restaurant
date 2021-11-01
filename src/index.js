@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ClientProvider from './context/ClientsContext';
+import { CssBaseline } from '@nextui-org/react';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CssBaseline />
+    <ClientProvider>
+      <App />
+    </ClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
